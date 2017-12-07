@@ -1,0 +1,40 @@
+<jaxb:bindings
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+    xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd"
+    jaxb:version="2.1"
+>
+
+    <jaxb:bindings>
+        <jaxb:globalBindings fixedAttributeAsConstantProperty="true" enableFailFastCheck="true"  >
+            <xjc:simple />
+            <jaxb:serializable/>
+            <jaxb:javaType name="java.util.Calendar" xmlType="xs:dateTime" parseMethod="javax.xml.bind.DatatypeConverter.parseDateTime" printMethod="javax.xml.bind.DatatypeConverter.printDateTime" />
+            <jaxb:javaType name="java.util.Calendar" xmlType="xs:date" parseMethod="javax.xml.bind.DatatypeConverter.parseDate" printMethod="javax.xml.bind.DatatypeConverter.printDate" />
+        </jaxb:globalBindings>
+    </jaxb:bindings>
+
+    <jaxb:bindings schemaLocation="../resources/xsd/common-types-4.3.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="org.apereo.portal.xml43" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+
+    <!-- Import/Export Schemas  -->
+    <jaxb:bindings schemaLocation="../resources/xsd/common-io-types-4.3.xsd">
+        <jaxb:schemaBindings>
+            <jaxb:package name="org.apereo.portal.io.xml43" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="../resources/xsd/portlet-definition-4.3.xsd">
+        <jaxb:bindings node="//xs:element[@name='portlet-definition']">
+            <jaxb:class name="ExternalPortletDefinition43"/>
+        </jaxb:bindings>
+        <jaxb:schemaBindings>
+            <jaxb:package name="org.apereo.portal.io.xml43.portlet" />
+        </jaxb:schemaBindings>
+    </jaxb:bindings>
+
+</jaxb:bindings>

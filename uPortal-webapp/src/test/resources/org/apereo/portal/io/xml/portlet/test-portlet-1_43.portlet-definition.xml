@@ -35,6 +35,7 @@
     </portlet-descriptor>
     <lifecycle>
         <approved user="system">2016-12-31T23:59:59.000Z</approved>
+        <published user="system">2015-11-06T12:48:19.717-07:00</published>
     </lifecycle>
     <category>Development</category>
     <group>Everyone</group>

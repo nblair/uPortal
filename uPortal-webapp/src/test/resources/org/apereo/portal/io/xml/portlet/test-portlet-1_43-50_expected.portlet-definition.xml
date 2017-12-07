@@ -35,6 +35,7 @@
     </portlet-descriptor>
     <lifecycle>
         <entry name="approved" user="system">2016-12-31T23:59:59.000Z</entry>
+        <entry name="published" user="system">2015-11-06T12:48:19.717-07:00</entry>
         <entry name="MAINTENANCE" user="system">1999-12-31T23:59:59.000Z</entry>
     </lifecycle>
     <category>Development</category>
